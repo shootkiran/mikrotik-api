@@ -5,32 +5,17 @@ namespace MikrotikAPI\Commands\IP;
 use MikrotikAPI\Talker\Talker,
     MikrotikAPI\Util\SentenceUtil;
 
-/**
- * Description of ARP
- *
- * @author Lalu Erfandi Maula Yusnu nunenuh@gmail.com <http://vthink.web.id>
- * @copyright Copyright (c) 2011, Virtual Think Team.
- * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @category Libraries
- */
+
 class ARP {
 
-    /**
-     *
-     * @var type array
-     */
+    
     private $talker;
 
     function __construct(Talker $talker) {
         $this->talker = $talker;
     }
 
-    /**
-     * This method is used to add arp
-     * @param type $param array
-     * @return type array
-     * j
-     */
+    
     public function add($param) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/arp/add");
@@ -41,12 +26,7 @@ class ARP {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to delete arp by id
-     * @param type $id string
-     * @return type array
-     * 
-     */
+    
     public function delete($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/arp/remove");
@@ -55,12 +35,7 @@ class ARP {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to enable arp by id
-     * @param type $id string
-     * @return type array
-     * 
-     */
+    
     public function enable($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/arp/enable");
@@ -69,12 +44,7 @@ class ARP {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to disable arp by id
-     * @param type $id string
-     * @return type array
-     * 
-     */
+    
     public function disable($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/arp/disable");
@@ -83,13 +53,7 @@ class ARP {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to set or edit by id
-     * @param type $param array
-     * @param type $id string
-     * @return type array
-     * 
-     */
+    
     public function set($param, $id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/arp/set");
@@ -101,11 +65,7 @@ class ARP {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to display all arp
-     * @return type array
-     * 
-     */
+    
     public function getAll() {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/ip/arp/getall");
@@ -119,13 +79,7 @@ class ARP {
         }
     }
 
-    /**
-     * This method is used to display arp
-     * in detail based on the id
-     * @param type $id string
-     * @return type array
-     *  
-     */
+    
     public function detail($id) {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/ip/arp/print");

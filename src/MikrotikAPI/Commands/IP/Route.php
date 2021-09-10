@@ -5,30 +5,17 @@ namespace MikrotikAPI\Commands\IP;
 use MikrotikAPI\Talker\Talker,
     MikrotikAPI\Util\SentenceUtil;
 
-/**
- * Description of Route
- *
- * @author      Lalu Erfandi Maula Yusnu nunenuh@gmail.com <http://vthink.web.id>
- * @copyright   Copyright (c) 2011, Virtual Think Team.
- * @license     http://opensource.org/licenses/gpl-license.php GNU Public License
- * @category	Libraries
- */
+
 class Route {
 
-    /**
-     *
-     * @var type array
-     */
+    
     private $talker;
 
     function __construct(Talker $talker) {
         $this->talker = $talker;
     }
 
-    /**
-     * This method is used to display all ip route
-     * @return type array
-     */
+    
     public function getAll() {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/ip/route/getall");
@@ -43,11 +30,7 @@ class Route {
         return $this->query('');
     }
 
-    /**
-     * This method is used to add ip route gateway
-     * @param type $param array
-     * @return type array
-     */
+    
     public function add($param) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/route/add");
@@ -58,11 +41,7 @@ class Route {
         return "Sucsess";
     }
 
-    /**
-     * Can change or disable only static routes
-     * @param type $id is not array 
-     * 
-     */
+    
     public function disable($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/route/disable");
@@ -71,12 +50,7 @@ class Route {
         return "Sucsess";
     }
 
-    /**
-     * Can change or enable only static routes
-     * @param type $id string
-     * @return type array
-     * 
-     */
+    
     public function enable($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/route/enable");
@@ -85,12 +59,7 @@ class Route {
         return "Sucsess";
     }
 
-    /**
-     * Can change or remove only static routes
-     * @param type $id string
-     * @return type array
-     * 
-     */
+    
     public function delete($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/route/remove");
@@ -99,13 +68,7 @@ class Route {
         return "Sucsess";
     }
 
-    /**
-     * Can change only static routes
-     * @param type $param array
-     * @param type $id string
-     * @return type array
-     * 
-     */
+    
     public function set($param, $id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/route/set");
@@ -117,13 +80,7 @@ class Route {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to display one ip route
-     * in detail based on the id
-     * @param type $id string
-     * @return type array
-     * 
-     */
+    
     public function detail($id) {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/ip/route/print");

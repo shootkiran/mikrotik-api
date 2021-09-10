@@ -6,16 +6,7 @@ use MikrotikAPI\Core\StreamReciever,
     MikrotikAPI\Core\StreamSender,
     MikrotikAPI\Util\Util;
 
-/**
- * Description of Connector
- *
- * @author Lalu Erfandi Maula Yusnu nunenuh@gmail.com <http://vthink.web.id>
- * @copyright Copyright (c) 2011, Virtual Think Team.
- * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @category Libraries
- * @property StreamSender $sender
- * @property StreamReciever $reciever
- */
+
 class Connector {
 
     private $socket;

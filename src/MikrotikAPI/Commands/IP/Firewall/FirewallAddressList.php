@@ -5,31 +5,17 @@ namespace MikrotikAPI\Commands\IP\Firewall;
 use MikrotikAPI\Talker\Talker,
     MikrotikAPI\Util\SentenceUtil;
 
-/**
- * Description of AddressList
- * @author Lalu Erfandi Maula Yusnu nunenuh@gmail.com <http://vthink.web.id>
- * @copyrigh Copyright (c) 2011, Virtual Think Team.
- * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @category Libraries
- */
+
 class FirewallAddressList {
 
-    /**
-     *
-     * @var Talker $talker
-     */
+
     private $talker;
 
     function __construct(Talker $talker) {
         $this->talker = $talker;
     }
 
-    /**
-     *
-     * @param type $param array
-     * @return type array
-     * This method is used to add address list
-     */
+
     public function add($param) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/firewall/address-list/add");
@@ -40,11 +26,7 @@ class FirewallAddressList {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to display all firewall filter
-     * @return type array
-     * 
-     */
+
     public function getAll() {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/ip/firewall/address-list/getall");
@@ -58,12 +40,7 @@ class FirewallAddressList {
         }
     }
 
-    /**
-     * This method is used to enable firewall filter by id
-     * @param type $id string
-     * @return type array
-     * 
-     */
+
     public function enable($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/firewall/address-list/enable");
@@ -72,12 +49,7 @@ class FirewallAddressList {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to disable firewall filter by id
-     * @param type $id string
-     * @return type array
-     * 
-     */
+
     public function disable($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/firewall/address-list/disable");
@@ -86,12 +58,7 @@ class FirewallAddressList {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to remove firewall filter by id
-     * @param type $id string
-     * @return type array
-     * 
-     */
+
     public function delete($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/firewall/address-list/remove");
@@ -100,13 +67,7 @@ class FirewallAddressList {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to change firewall nat based on the id
-     * @param type $param array
-     * @param type $id string
-     * @return type array
-     * 
-     */
+
     public function set($param, $id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/firewall/address-list/set");
@@ -118,13 +79,7 @@ class FirewallAddressList {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to display one firewall filter
-     * in detail based on the id
-     * @param type $id string
-     * @return type array
-     * 
-     */
+
     public function detail($id) {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/ip/firewall/address-list/print");

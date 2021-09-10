@@ -2,14 +2,7 @@
 
 namespace MikrotikAPI\Core;
 
-/**
- * Description of StreamSender
- *
- * @author Lalu Erfandi Maula Yusnu nunenuh@gmail.com <http://vthink.web.id>
- * @copyright Copyright (c) 2011, NuneNuh.
- * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @category Libraries
- */
+
 class StreamSender {
 
     private $socket;

@@ -8,14 +8,7 @@ use MikrotikAPI\Core\Connector,
     MikrotikAPI\Util\Util,
     MikrotikAPI\Util\DebugDumper;
 
-/**
- * Description of TalkerSender
- *
- * @author Lalu Erfandi Maula Yusnu nunenuh@gmail.com <http://vthink.web.id>
- * @copyright Copyright (c) 2011, Virtual Think Team.
- * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @category Libraries
- */
+
 class TalkerSender {
 
     private $debug = FALSE;

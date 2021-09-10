@@ -5,14 +5,7 @@ namespace MikrotikAPI\Commands\IP;
 use MikrotikAPI\Talker\Talker,
     MikrotikAPI\Util\SentenceUtil;
 
-/**
- * Description of Service
- *
- * @author Lalu Erfandi Maula Yusnu nunenuh@gmail.com <http://vthink.web.id>
- * @copyright Copyright (c) 2011, Virtual Think Team.
- * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @category Libraries
- */
+
 class Service {
 
     private $talker;
@@ -21,10 +14,7 @@ class Service {
         $this->talker = $talker;
     }
 
-    /**
-     * This methode is used to display all ip service
-     * @return type array
-     */
+    
     public function getAll() {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/ip/service/getall");
@@ -38,11 +28,7 @@ class Service {
         }
     }
 
-    /**
-     * This methode is used to enable ip service by id
-     * @param type $id string
-     * @return type array
-     */
+    
     public function enable($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/service/enable");
@@ -51,11 +37,7 @@ class Service {
         return "Sucsess";
     }
 
-    /**
-     * This methode is used to disable ip service by id
-     * @param type $id string
-     * @return type array
-     */
+    
     public function disable($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/service/disable");
@@ -64,12 +46,7 @@ class Service {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to display one ip service
-     * in detail based on the id
-     * @param type $id string
-     * @return type array
-     */
+    
     public function detail($id) {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/ip/service/print");
@@ -84,12 +61,7 @@ class Service {
         }
     }
 
-    /**
-     * 
-     * @param array $param
-     * @param string $id
-     * @return string
-     */
+    
     public function set($param, $id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/service/set");

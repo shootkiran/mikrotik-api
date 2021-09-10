@@ -5,30 +5,16 @@ namespace MikrotikAPI\Commands\IP;
 use MikrotikAPI\Talker\Talker,
     MikrotikAPI\Util\SentenceUtil;
 
-/**
- * Description of Mapi_Ip_Dns
- * @author      Lalu Erfandi Maula Yusnu nunenuh@gmail.com <http://vthink.web.id>
- * @copyright   Copyright (c) 2011, Virtual Think Team.
- * @license     http://opensource.org/licenses/gpl-license.php GNU Public License
- * @category	Libraries
- */
+
 class DNS{
-    /**
-     *
-     * @var type array
-     */
+
     private $talker;
     
     function __construct(Talker $talker){
         $this->talker = $talker;
     }
     
-   /**
-    * This method is used to configure dns
-    * @param type $servers string example : '192.168.1.1,192.168.2.1'
-    * @return type array
-    * 
-    */
+
     public function set($servers){
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/dns/set");
@@ -37,12 +23,7 @@ class DNS{
         return "Sucsess";
     }
     
-    /**
-     * This method is used to display
-     * all dns
-     * @return type array
-     * 
-     */
+
     public function getAll(){
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/ip/dns/getall");
@@ -56,12 +37,7 @@ class DNS{
         }
     }
      
-    /**
-     * This method is used to add the static dns
-     * @param type $param array
-     * @return type array
-     * 
-     */
+
     public function addStatic($param){
        $sentence = new SentenceUtil();
        $sentence->addCommand("/ip/dns/static/add");
@@ -71,12 +47,7 @@ class DNS{
        $this->talker->send($sentence);
        return "Sucsess";
     }
-   /**
-    * This method is used to display
-    * all static dns
-    * @return type array
-    * 
-    */
+
     public function getAllStatic(){
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/ip/dns/static/getall");
@@ -90,13 +61,7 @@ class DNS{
         }
     }
     
-    /**
-     * This method is used to display one static dns 
-     * in detail based on the id
-     * @param type $id string
-     * @return type array
-     * 
-     */
+
      public function detailStatic($id){
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/ip/dns/static/print");
@@ -111,13 +76,7 @@ class DNS{
         }
     }
     
-    /**
-     * This method is used to change based on the id
-     * @param type $param array
-     * @param type $id string
-     * @return type array
-     * 
-     */
+
     public function setStatic($param, $id){
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/dns/static/set");
@@ -129,12 +88,7 @@ class DNS{
         return "Sucsess";
     }
 
-     /**
-     * This method is used to display
-     * all dns cache
-     * @return array || string
-     * 
-     */
+
     public function getAllCache(){
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/ip/dns/cache/getall");
@@ -148,13 +102,7 @@ class DNS{
         }
     }
     
-    /**
-     * This method is used to display one dns cache 
-     * in detail based on the id
-     * @param type $id string
-     * @return type array
-     * 
-     */
+
      public function detailCache($id){
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/ip/dns/cache/print");
@@ -169,12 +117,7 @@ class DNS{
         }
     }
     
-    /**
-     * This method is used to display
-     * all dns cache all cache
-     * @return type array
-     * 
-     */
+
     public function getAllCacheAll(){
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/ip/dns/cache/all/getall");
@@ -188,13 +131,7 @@ class DNS{
         }
     }
     
-     /**
-     * This method is used to display one dns cache all 
-     * in detail based on the id
-     * @param type $id string
-     * @return type array
-     * 
-     */
+
      public function detailCacheAll($id){
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/ip/dns/cache/all/print");

@@ -5,29 +5,17 @@ namespace Mikrotik\Commands\IP\Hotspot;
 use Mikrotik\API\Talker\Talker,
     Mikrotik\API\Util\SentenceUtil;
 
-/**
- * Description of Server
- * @author Lalu Erfandi Maula Yusnu nunenuh@gmail.com <http://vthink.web.id>
- * @copyright Copyright (c) 2011, Virtual Think Team.
- * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @category Libraries
- */
+
 class HotspotServer {
 
-    /**
-     *
-     * @var Talker
-     */
+    
     private $talker;
 
     function __construct(Talker $talker) {
         $this->talker = $talker;
     }
 
-    /**
-     * This function is used to add hotspot
-     * @return type array
-     */
+    
     public function add($param) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/hotspot/add");
@@ -38,12 +26,7 @@ class HotspotServer {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to delete hotspot by id
-     * @param type $id string
-     * @return type array
-     * 
-     */
+    
     public function delete($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/hotspot/remove");
@@ -52,12 +35,7 @@ class HotspotServer {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to enable hotspot by id
-     * @param type $id string
-     * @return type array
-     * 
-     */
+    
     public function enable($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/hotspot/enable");
@@ -66,12 +44,7 @@ class HotspotServer {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to disable hotspot by id
-     * @param type $id string
-     * @return type array
-     * 
-     */
+    
     public function disable($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/hotspot/disable");
@@ -80,13 +53,7 @@ class HotspotServer {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to set or edit by id
-     * @param type $param array
-     * @param type $id string
-     * @return type array
-     * 
-     */
+    
     public function set($param, $id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/hotspot/set");
@@ -98,11 +65,7 @@ class HotspotServer {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to display all hotspot
-     * @return type array
-     * 
-     */
+    
     public function getAll() {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/ip/hotspot/getall");
@@ -116,13 +79,7 @@ class HotspotServer {
         }
     }
 
-    /**
-     * This method is used to display hotspot
-     * in detail based on the id
-     * @param type $id string
-     * @return type array
-     *  
-     */
+    
     public function detail($id) {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/ip/hotspot/print");

@@ -5,14 +5,7 @@ namespace MikrotikAPI\Commands\Interfaces;
 use MikrotikAPI\Util\SentenceUtil,
     MikrotikAPI\Talker\Talker;
 
-/**
- * Description of PPPServer
- *
- * @author      Lalu Erfandi Maula Yusnu nunenuh@gmail.com <http://vthink.web.id>
- * @copyright   Copyright (c) 2011, Virtual Think Team.
- * @license     http://opensource.org/licenses/gpl-license.php GNU Public License
- * @category	Libraries
- */
+
 class PPPServer {
 
     private $talker;
@@ -21,11 +14,7 @@ class PPPServer {
         $this->talker = $talker;
     }
 
-    /**
-     * This method used for add new interface ppp-sever
-     * @param type $param array
-     * @return type array
-     */
+    
     public function add($param) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/ppp-server/add");
@@ -36,11 +25,7 @@ class PPPServer {
         return "Sucsess";
     }
 
-    /**
-     * This method used for disable interface ppp-sever
-     * @param type $id string
-     * @return type array
-     */
+    
     public function disable($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/ppp-server/disable");
@@ -49,11 +34,7 @@ class PPPServer {
         return "Sucsess";
     }
 
-    /**
-     * This method used for enable interface ppp-sever
-     * @param type $id string
-     * @return type array
-     */
+    
     public function enable($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/ppp-server/enable");
@@ -62,11 +43,7 @@ class PPPServer {
         return "Sucsess";
     }
 
-    /**
-     * This method used for delete interface ppp-sever
-     * @param type $id string
-     * @return type array
-     */
+    
     public function delete($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/ppp-server/remove");
@@ -75,11 +52,7 @@ class PPPServer {
         return "Sucsess";
     }
 
-    /**
-     * This method used for detail interface ppp-sever
-     * @param type $id string
-     * @return type array
-     */
+    
     public function detail($id) {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/interface/ppp-server/print");
@@ -94,12 +67,7 @@ class PPPServer {
         }
     }
 
-    /**
-     * This method used for set or edit interface ppp-sever
-     * @param type $param array
-     * @param type $id string
-     * @return type array
-     */
+    
     public function set($param, $id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/ppp-server/set");
@@ -111,10 +79,7 @@ class PPPServer {
         return "Sucsess";
     }
 
-    /**
-     * This method used for get all interface ppp-sever
-     * @return array
-     */
+    
     public function getAll() {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/interface/ppp-server/getall");

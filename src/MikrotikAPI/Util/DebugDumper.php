@@ -2,11 +2,7 @@
 
 namespace MikrotikAPI\Util;
 
-/**
- * Description of Debug
- *
- * @author nunenuh
- */
+
 class DebugDumper {
 
     public static function dump($var, $detail = false) {

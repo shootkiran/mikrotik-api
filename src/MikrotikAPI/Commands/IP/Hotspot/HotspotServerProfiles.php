@@ -5,29 +5,17 @@ namespace Mikrotik\Commands\IP\Hotspot;
 use Mikrotik\API\Talker\Talker,
     Mikrotik\API\Util\SentenceUtil;
 
-/**
- * Description of ServerProfiles
- * @author Lalu Erfandi Maula Yusnu nunenuh@gmail.com <http://vthink.web.id>
- * @copyright Copyright (c) 2011, Virtual Think Team.
- * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @category Libraries
- */
+
 class HotspotServerProfiles {
 
-    /**
-     *
-     * @var Talker
-     */
+    
     private $talker;
 
     function __construct(Talker $talker) {
         $this->talker = $talker;
     }
 
-    /**
-     * This function is used to add hotspot profile
-     * @return type array
-     */
+    
     public function add($param) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/hotspot/profile/add");
@@ -38,12 +26,7 @@ class HotspotServerProfiles {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to delete hotspot profile by id
-     * @param type $id string
-     * @return type array
-     * 
-     */
+    
     public function delete($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/hotspot/profile/remove");
@@ -52,12 +35,7 @@ class HotspotServerProfiles {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to enable hotspot profile by id
-     * @param type $id string
-     * @return type array
-     * 
-     */
+    
     public function enable($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/hotspot/profile/enable");
@@ -66,12 +44,7 @@ class HotspotServerProfiles {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to disable hotspot profile by id
-     * @param type $id string
-     * @return type array
-     * 
-     */
+    
     public function disable($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/hotspot/profile/disable");
@@ -80,13 +53,7 @@ class HotspotServerProfiles {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to set or edit by id
-     * @param type $param array
-     * @param type $id string
-     * @return type array
-     * 
-     */
+    
     public function set($param, $id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/hotspot/profile/set");
@@ -98,11 +65,7 @@ class HotspotServerProfiles {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to display all hotspot profile
-     * @return type array
-     * 
-     */
+    
     public function getAll() {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/ip/hotspot/profile/getall");
@@ -116,13 +79,7 @@ class HotspotServerProfiles {
         }
     }
 
-    /**
-     * This method is used to display hotspot
-     * in detail based on the id
-     * @param type $id string
-     * @return type array
-     *  
-     */
+    
     public function detail($id) {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/ip/hotspot/profile/print");

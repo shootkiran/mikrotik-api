@@ -5,14 +5,7 @@ namespace MikrotikAPI\Commands\Interfaces;
 use MikrotikAPI\Util\SentenceUtil,
     MikrotikAPI\Talker\Talker;
 
-/**
- * Description of Mapi_interface
- *
- * @author      Lalu Erfandi Maula Yusnu nunenuh@gmail.com <http://vthink.web.id>
- * @copyright   Copyright (c) 2011, Virtual Think Team.
- * @license     http://opensource.org/licenses/gpl-license.php GNU Public License
- * @category	Libraries
- */
+
 class PPTPClient {
 
     private $talker;
@@ -21,11 +14,7 @@ class PPTPClient {
         $this->talker = $talker;
     }
 
-    /**
-     * This method used for add new interface pptp-client
-     * @param type $param array
-     * @return type array
-     */
+    
     public function add($param) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/pptp-client/add");
@@ -36,11 +25,7 @@ class PPTPClient {
         return "Sucsess";
     }
 
-    /**
-     * This method used for disable interface pptp-client
-     * @param type $id string
-     * @return type array
-     */
+    
     public function disable($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/pptp-client/disable");
@@ -49,11 +34,7 @@ class PPTPClient {
         return "Sucsess";
     }
 
-    /**
-     * This method used for enable interface pptp-client
-     * @param type $id string
-     * @return type array
-     */
+    
     public function enable($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/pptp-client/enable");
@@ -62,11 +43,7 @@ class PPTPClient {
         return "Sucsess";
     }
 
-    /**
-     * This method used for delete interface pptp-client
-     * @param type $id string
-     * @return type array
-     */
+    
     public function delete($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/pptp-client/remove");
@@ -75,11 +52,7 @@ class PPTPClient {
         return "Sucsess";
     }
 
-    /**
-     * This method used for detail interface pptp-client
-     * @param type $id string
-     * @return type array
-     */
+    
     public function detail($id) {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/interface/pptp-client/print");
@@ -94,12 +67,7 @@ class PPTPClient {
         }
     }
 
-    /**
-     * This method used for set or edit interface pptp-client
-     * @param type $param array
-     * @param type $id string
-     * @return type array
-     */
+    
     public function set($param, $id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/pptp-client/set");
@@ -111,10 +79,7 @@ class PPTPClient {
         return "Sucsess";
     }
 
-    /**
-     * This method used for get all interface pptp-client
-     * @return type array
-     */
+    
     public function get_all() {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/interface/pptp-client/getall");

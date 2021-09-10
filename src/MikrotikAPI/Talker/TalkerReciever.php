@@ -8,14 +8,7 @@ use MikrotikAPI\Core\Connector,
     MikrotikAPI\Entity\Attribute,
     MikrotikAPI\Util\DebugDumper;
 
-/**
- * Description of TalkerReciever
- *
- * @author Lalu Erfandi Maula Yusnu nunenuh@gmail.com <http://vthink.web.id>
- * @copyright Copyright (c) 2011, Virtual Think Team.
- * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @category Libraries
- */
+
 class TalkerReciever {
 
     private $con;

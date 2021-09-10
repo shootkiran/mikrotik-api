@@ -5,31 +5,17 @@ namespace MikrotikAPI\Commands\Interfaces;
 use MikrotikAPI\Util\SentenceUtil,
     MikrotikAPI\Talker\Talker;
 
-/**
- * Description of IPTunnel
- *
- * @author      Lalu Erfandi Maula Yusnu nunenuh@gmail.com <http://vthink.web.id>
- * @copyright   Copyright (c) 2011, Virtual Think Team.
- * @license     http://opensource.org/licenses/gpl-license.php GNU Public License
- * @category	Libraries
- */
+
 class IPTunnel {
 
-    /**
-     *
-     * @var type array
-     */
+    
     private $talker;
 
     function __construct(Talker $talker) {
         $this->talker = $talker;
     }
 
-    /**
-     * This method is used to add interface ipip
-     * @param type $param array
-     * @return type array
-     */
+    
     public function add($param) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/ipip/add");
@@ -40,10 +26,7 @@ class IPTunnel {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to display all interface ipip
-     * @return type array
-     */
+    
     public function get_all() {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/interface/ipip/getall");
@@ -57,11 +40,7 @@ class IPTunnel {
         }
     }
 
-    /**
-     * This method is used to enable interface ipip by id
-     * @param type $id string
-     * @return type array
-     */
+    
     public function enable($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/ipip/enable");
@@ -70,11 +49,7 @@ class IPTunnel {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to disable interface ipip by id
-     * @param type $id string
-     * @return type array
-     */
+    
     public function disable($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/ipip/disable");
@@ -83,11 +58,7 @@ class IPTunnel {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to remove interface ipip
-     * @param type $id string
-     * @return type array
-     */
+    
     public function delete($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/ipip/remove");
@@ -96,12 +67,7 @@ class IPTunnel {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to set or edit interface ipip by id
-     * @param type $param array
-     * @param type $id string
-     * @return type 
-     */
+    
     public function set($param, $id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/ipip/set");
@@ -113,12 +79,7 @@ class IPTunnel {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to display one interface ipip 
-     * in detail based on the id
-     * @param type $id string
-     * @return type array
-     */
+    
     public function detail($id) {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/interface/ipip/print");

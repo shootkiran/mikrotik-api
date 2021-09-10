@@ -5,31 +5,17 @@ namespace MikrotikAPI\Commands\IP\Firewall;
 use MikrotikAPI\Talker\Talker,
     MikrotikAPI\Util\SentenceUtil;
 
-/**
- * Description of Mangle
- * @author Lalu Erfandi Maula Yusnu nunenuh@gmail.com <http://vthink.web.id>
- * @copyright Copyright (c) 2011, Virtual Think Team.
- * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @category Libraries
- * 
- */
+
 class FirewallMangle {
 
-    /**
-     *
-     * @var Talker $talker
-     */
+
     private $talker;
 
     function __construct(Talker $talker) {
         $this->talker = $talker;
     }
 
-    /**
-     * This method used for add new Ip Firewall Mangle 
-     * @param type $param array
-     * @return type array
-     */
+
     public function add($param) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/firewall/mangle/add");
@@ -40,11 +26,7 @@ class FirewallMangle {
         return "Sucsess";
     }
 
-    /**
-     * This method used for disable Ip Firewall Mangle
-     * @param type $id string
-     * @return type array
-     */
+
     public function disable($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/firewall/mangle/disable");
@@ -53,11 +35,7 @@ class FirewallMangle {
         return "Sucsess";
     }
 
-    /**
-     * This method used for enable Ip Firewall Mangle
-     * @param type $id string
-     * @return type array
-     */
+
     public function enable($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/firewall/mangle/enable");
@@ -66,11 +44,7 @@ class FirewallMangle {
         return "Sucsess";
     }
 
-    /**
-     * This method used for delete Ip Firewall Mangle
-     * @param type $id string
-     * @return type array
-     */
+
     public function delete($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/firewall/mangle/remove");
@@ -79,11 +53,7 @@ class FirewallMangle {
         return "Sucsess";
     }
 
-    /**
-     * This method used for detail Ip Firewall Mangle
-     * @param type $id string
-     * @return type array
-     */
+
     public function detail($id) {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/ip/firewall/mangle/print");
@@ -98,12 +68,7 @@ class FirewallMangle {
         }
     }
 
-    /**
-     * This method used for set or edit Ip Firewall Mangle
-     * @param type $param array
-     * @param type $id string
-     * @return type array
-     */
+
     public function set($param, $id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/firewall/mangle/set");
@@ -115,10 +80,7 @@ class FirewallMangle {
         return "Sucsess";
     }
 
-    /**
-     * This method used for get all Ip Firewall Mangle
-     * @return type array
-     */
+
     public function getAll() {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/ip/firewall/mangle/getall");

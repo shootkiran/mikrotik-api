@@ -5,14 +5,7 @@ namespace MikrotikAPI\Commands\Interfaces;
 use MikrotikAPI\Util\SentenceUtil,
     MikrotikAPI\Talker\Talker;
 
-/**
- * Description of Mapi_interface_Bridge
- *
- * @author Lalu Erfandi Maula Yusnu nunenuh@gmail.com <http://vthink.web.id>
- * @copyright Copyright (c) 2011, Virtual Think Team.
- * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @category Libraries
- */
+
 class Bridge {
 
     private $talker;
@@ -21,11 +14,7 @@ class Bridge {
         $this->talker = $talker;
     }
 
-    /**
-     * This method used for add new interface bridge
-     * @param type $param array
-     * @return type array
-     */
+    
     public function add_bridge($param) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/bridge/add");
@@ -36,11 +25,7 @@ class Bridge {
         return "Sucsess";
     }
 
-    /**
-     * This method used for disable interface bridge
-     * @param type $id string
-     * @return type array
-     */
+    
     public function disable_bridge($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/bridge/disable");
@@ -49,11 +34,7 @@ class Bridge {
         return "Sucsess";
     }
 
-    /**
-     * This method used for enable interface bridge
-     * @param type $id string
-     * @return type array
-     */
+    
     public function enable_bridge($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/bridge/enable");
@@ -62,11 +43,7 @@ class Bridge {
         return "Sucsess";
     }
 
-    /**
-     * This method used for delete interface bridge
-     * @param type $id string
-     * @return type array
-     */
+    
     public function delete_bridge($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/bridge/remove");
@@ -75,10 +52,7 @@ class Bridge {
         return "Sucsess";
     }
 
-    /**
-     * This method used for get all interface bridge
-     * @return type array
-     */
+    
     public function get_all_bridge() {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/interface/bridge/getall");
@@ -92,12 +66,7 @@ class Bridge {
         }
     }
 
-    /**
-     * This method used for set or edit interface bridge
-     * @param type $param array
-     * @param type $id string
-     * @return type array
-     */
+    
     public function set_bridge($param, $id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/bridge/set");
@@ -109,11 +78,7 @@ class Bridge {
         return "Sucsess";
     }
 
-    /**
-     * This method used for detail interface bridge
-     * @param type $id string
-     * @return type array
-     */
+    
     public function detail_bridge($id) {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/interface/bridge/print");
@@ -138,11 +103,7 @@ class Bridge {
         return "Sucsess";
     }
 
-    /**
-     * This method used for disable interface bridge
-     * @param type $id string
-     * @return type array
-     */
+    
     public function disable_bridge_nat($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/bridge/nat/disable");
@@ -151,11 +112,7 @@ class Bridge {
         return "Sucsess";
     }
 
-    /**
-     * This method used for enable interface bridge
-     * @param type $id string
-     * @return type array
-     */
+    
     public function enable_bridge_nat($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/bridge/nat/enable");
@@ -164,11 +121,7 @@ class Bridge {
         return "Sucsess";
     }
 
-    /**
-     * This method used for delete interface bridge
-     * @param type $id string
-     * @return type array
-     */
+    
     public function delete_bridge_nat($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/bridge/nat/remove");
@@ -177,10 +130,7 @@ class Bridge {
         return "Sucsess";
     }
 
-    /**
-     * This method used for get all interface bridge
-     * @return type array
-     */
+    
     public function get_all_bridge_nat() {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/interface/bridge/nat/getall");
@@ -194,12 +144,7 @@ class Bridge {
         }
     }
 
-    /**
-     * This method used for set or edit interface bridge
-     * @param type $param array
-     * @param type $id string
-     * @return type array
-     */
+    
     public function set_bridge_nat($param, $id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/bridge/nat/set");
@@ -211,11 +156,7 @@ class Bridge {
         return "Sucsess";
     }
 
-    /**
-     * This method used for detail interface bridge
-     * @param type $id string
-     * @return type array
-     */
+    
     public function detail_bridge_nat($id) {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/interface/bridge/nat/print");
@@ -230,13 +171,7 @@ class Bridge {
         }
     }
 
-    /**
-     * This method used for set interface Bridge Settings
-     * @param type $use_ip_firewall string (default : yes or no)
-     * @param type $use_ip_firewall_for_vlan string (default : yes or no)
-     * @param type $use_ip_firewall_for_pppoe string (default : yes or no)
-     * @return type array
-     */
+    
     public function set_bridge_settings($use_ip_firewall, $use_ip_firewall_for_vlan, $use_ip_firewall_for_pppoe) {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/interface/bridge/settings/set");
@@ -247,10 +182,7 @@ class Bridge {
         return "Sucsess";
     }
 
-    /**
-     * This method used for get all interface Bridge Settings
-     * @return type array
-     */
+    
     public function get_all_bridge_settings() {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/interface/bridge/settings/getall");

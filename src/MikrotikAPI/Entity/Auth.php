@@ -2,59 +2,31 @@
 
 namespace MikrotikAPI\Entity;
 
-/**
- * Description of Auth
- *
- * @author nunenuh
- */
+
 class Auth {
 
-    /**
-     *
-     * @var string
-     */
+    
     private $host;
 
-    /**
-     *
-     * @var int 
-     */
+    
     private $port = 8728;
 
-    /**
-     *
-     * @var string
-     */
+    
     private $username;
 
-    /**
-     *
-     * @var string 
-     */
+    
     private $password;
 
-    /**
-     *
-     * @var boolean 
-     */
+    
     private $debug = FALSE;
 
-    /**
-     *
-     * @var int
-     */
+    
     private $attempts = 5;
 
-    /**
-     *
-     * @var int
-     */
+    
     private $delay = 2;
 
-    /**
-     *
-     * @var int
-     */
+    
     private $timeout = 2;
 
     function __construct() {

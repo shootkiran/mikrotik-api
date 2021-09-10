@@ -5,14 +5,7 @@ namespace MikrotikAPI\Commands\Interfaces;
 use MikrotikAPI\Util\SentenceUtil,
     MikrotikAPI\Talker\Talker;
 
-/**
- * Description of L2TPServer
- *
- * @author Lalu Erfandi Maula Yusnu nunenuh@gmail.com <http://vthink.web.id>
- * @copyright Copyright (c) 2011, Virtual Think Team.
- * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @category Libraries
- */
+
 class L2TPServer {
 
     private $talker;
@@ -21,11 +14,7 @@ class L2TPServer {
         $this->talker = $talker;
     }
 
-    /**
-     * This method used for add new l2tp server
-     * @param type $param array
-     * @return type array
-     */
+    
     public function add($param) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/l2tp-server/add");
@@ -36,11 +25,7 @@ class L2TPServer {
         return "Sucsess";
     }
 
-    /**
-     * This method used for disable l2tp server
-     * @param type $id string
-     * @return type array
-     */
+    
     public function disable($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/l2tp-server/disable");
@@ -49,11 +34,7 @@ class L2TPServer {
         return "Sucsess";
     }
 
-    /**
-     * This method used for enable l2tp server
-     * @param type $id string
-     * @return type array
-     */
+    
     public function enable($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/l2tp-server/enable");
@@ -62,11 +43,7 @@ class L2TPServer {
         return "Sucsess";
     }
 
-    /**
-     * This method used for delete l2tp server
-     * @param type $id string
-     * @return type array
-     */
+    
     public function delete($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/l2tp-server/remove");
@@ -75,11 +52,7 @@ class L2TPServer {
         return "Sucsess";
     }
 
-    /**
-     * This method used for detail l2tp server
-     * @param type $id string
-     * @return type array
-     */
+    
     public function detail($id) {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/interface/l2tp-server/print");
@@ -94,12 +67,7 @@ class L2TPServer {
         }
     }
 
-    /**
-     * This method used for set or edit l2tp server
-     * @param type $param array
-     * @param type $id string
-     * @return type array
-     */
+    
     public function set($param, $id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/l2tp-server/set");
@@ -111,10 +79,7 @@ class L2TPServer {
         return "Sucsess";
     }
 
-    /**
-     * This method used for get all l2tp server
-     * @return type array
-     */
+    
     public function getAll() {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/interface/l2tp-server/getall");
@@ -128,10 +93,7 @@ class L2TPServer {
         }
     }
 
-    /**
-     * This method used for get all l2tp server server
-     * @return type array
-     */
+    
     public function getAllServer() {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/interface/l2tp-server/server/getall");
@@ -145,11 +107,7 @@ class L2TPServer {
         }
     }
 
-    /**
-     * This method used for set l2tp server server
-     * @param type $param array
-     * @return type array
-     */
+    
     public function setServer($param) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/interface/l2tp-server/server/set");

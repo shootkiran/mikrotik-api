@@ -5,31 +5,17 @@ namespace MikrotikAPI\Commands\IP;
 use MikrotikAPI\Talker\Talker,
     MikrotikAPI\Util\SentenceUtil;
 
-/**
- * Description of Pool
- * @author Lalu Erfandi Maula Yusnu nunenuh@gmail.com <http://vthink.web.id>
- * @copyright Copyright (c) 2011, Virtual Think Team.
- * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- * @category Libraries
- */
+
 class Pool {
 
-    /**
-     *
-     * @var type array
-     */
+    
     private $talker;
 
     function __construct(Talker $talker) {
         $this->talker = $talker;
     }
 
-    /**
-     * This method is used to add pool
-     * @param array $param 
-     * @return array
-     * 
-     */
+    
     public function add($param) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/pool/add");
@@ -40,11 +26,7 @@ class Pool {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to display
-     * all pool
-     * @return array or string
-     */
+    
     public function getAll() {
         $sentence = new SentenceUtil();
         $sentence->fromCommand('/ip/pool/getall');
@@ -58,12 +40,7 @@ class Pool {
         }
     }
 
-    /**
-     * This method is used to remove the pool by id
-     * @param string $id
-     * @return array
-     * 
-     */
+    
     public function delete($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/pool/remove");
@@ -72,13 +49,7 @@ class Pool {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to change pool based on the id
-     * @param array $param
-     * @param string $id
-     * @return array
-     * 
-     */
+    
     public function set($param, $id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ip/pool/set");
@@ -90,13 +61,7 @@ class Pool {
         return "Sucsess";
     }
 
-    /**
-     * This method is used to display one pool 
-     * in detail based on the id
-     * @param type $id string
-     * @return type array
-     * 
-     */
+    
     public function detail($id) {
         $sentence = new SentenceUtil();
         $sentence->fromCommand("/ip/pool/print");
