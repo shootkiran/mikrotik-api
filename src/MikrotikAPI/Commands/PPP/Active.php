@@ -42,7 +42,7 @@ class Active {
     }
     public function deleteByName($name) {
         $detail = $this->detail($name);
-        $id =is_array($detail)?$detail['.id']:null;
+        $id =is_array($detail)?$detail[0]['.id']:null;
         return $id ? $this->deleteById($id) : "No PPP Active with name $name found";
 
     }
