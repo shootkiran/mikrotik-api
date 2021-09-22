@@ -33,7 +33,7 @@ class Auth {
         
     }
 
-    public function set($host, $port, $username, $password, $debug, $attempts, $delay, $timeout) {
+    public function set($host, $port, $username, $password, $debug=true, $attempts=3, $delay=100, $timeout=100) {
         $this->host = $host;
         $this->port = $port;
         $this->username = $username;
