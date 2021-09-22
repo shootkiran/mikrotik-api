@@ -21,11 +21,7 @@ class Active {
         $this->talker->send($sentence);
         $rs = $this->talker->getResult();
         $i = 0;
-        if ($i < $rs->size()) {
-            return $rs->getResultArray();
-        } else {
-            return "No PPP Active To Set, Please Your Add PPP Active";
-        }
+        return $i < $rs->size() ? $rs->getResultArray() : "No PPP Active To Set, Please Your Add PPP Active";
     }
 
     public function detail($name){
@@ -35,18 +31,20 @@ class Active {
         $this->talker->send($sentence);
         $rs = $this->talker->getResult();
         $i = 0;
-        if ($i < $rs->size()) {
-            return $rs->getResultArray();
-        } else {
-            return "No PPP Active with name $name found";
-        }
+        return $i < $rs->size() ? $rs->getResultArray() : "No PPP Active with name $name found";
     }
-    public function delete($id) {
+    public function deleteById($id) {
         $sentence = new SentenceUtil();
         $sentence->addCommand("/ppp/active/remove");
         $sentence->where(".id", "=", $id);
-        $enable = $this->talker->send($sentence);
+        $this->talker->send($sentence);
         return "Sucsess";
+    }
+    public function deleteByName($name) {
+        $detail = $this->detail($name);
+        $id =is_array($detail)?$detail['.id']:null;
+        return $id ? $this->deleteById($id) : "No PPP Active with name $name found";
+
     }
 
 }
